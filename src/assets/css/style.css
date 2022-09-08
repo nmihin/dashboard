@@ -96,9 +96,9 @@ License        :   Licensed under ThemeForest License
 /* ########## BOOTSTRAP OVERRIDES ########## */
 /* ###### Bootstrap ###### */
 :root {
-    --primary-bg-color: #4d65d9;
-    --primary-bg-hover: rgba(77, 101, 217, 0.8);
-    --primary-bg-border: #4d65d9;
+    --primary-bg-color: #FF9B21;
+    --primary-bg-hover: #C87202;
+    --primary-bg-border: #FF9B21;
     --dark-theme: #282d3e;
     --dark-body: #3c3f4e;
     --dark-border: rgba(255, 255, 255, 0.1);
@@ -121,7 +121,7 @@ License        :   Licensed under ThemeForest License
     --teal: #20c997;
     --cyan: #17a2b8;
     --white: #ffffff;
-    --gray: #6c757d;
+    --gray: #767676;
     --gray-dark: #343a40;
     --primary: #4d65d9;
     --secondary: #f1388b;
@@ -3036,7 +3036,7 @@ fieldset:disabled a.btn {
 }
 
 .btn-primary-transparent {
-    background-color: var(--primary02);
+    background-color: #FF9B21;
     color: var(--primary-bg-color);
 }
 
@@ -16721,6 +16721,7 @@ body.rtl {
 .rtl .signpages .details {
     border-top-right-radius: 0px;
     border-bottom-right-radius: 0px;
+    background-color: #767676;
 }
 
 .rtl .construction {
@@ -38180,6 +38181,10 @@ body:is(.color-menu) .main-sidebar-body .nav-sub-item .nav-sub-link.active {
     flex: 1;
     display: flex;
     justify-content: center;
+}
+
+.main-signin-wrapper .signin-page-new {
+    background-color: #767676;
 }
 
 .main-card-signin {
