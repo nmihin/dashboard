@@ -350,31 +350,31 @@ a.btn.disabled, fieldset:disabled a.btn {
 .btn-secondary {
   color: $white;
   background-color: $secondary;
-  border-color: #ea67a2;
+  border-color: #FF9B21;
 
   &:hover {
     color: $white;
-    background-color: #de287a;
-    border-color: #ea67a2;
+    background-color: #C87202;
+    border-color: #FF9B21;
   }
 
   &:focus, &.focus {
-    background-color: #de287a !important;
-    border-color:  #ea67a2 !important;
-    box-shadow: 0 0 0 1px rgba(241, 56, 139, 0.3);
+    background-color: #C87202 !important;
+    border-color:  #FF9B21 !important;
+    box-shadow: 0 0 0 1px rgba(200, 114, 2, 0.3);
   }
 
   &.disabled, &:disabled {
     color: $white;
     background-color: $secondary;
-    border-color: #ea67a2;
+    border-color: #FF9B21;
   }
 
   &:not(:disabled):not(.disabled) {
     &:active, &.active {
       color: $white;
-      background-color: #de287a;
-      border-color: #ea67a2;
+      background-color: #C87202;
+      border-color: #FF9B21;
     }
   }
 }
@@ -382,17 +382,17 @@ a.btn.disabled, fieldset:disabled a.btn {
 .show > .btn-secondary.dropdown-toggle {
   color: $white;
   background-color: $secondary;
-  border-color: #ea67a2;
+  border-color: #FF9B21;
 }
 
 .btn-secondary:not(:disabled):not(.disabled) {
   &:active:focus, &.active:focus {
-    box-shadow: 0 0 0 1px rgba(241, 56, 139, 0.3);
+    box-shadow: 0 0 0 1px rgba(200, 114, 2, 0.3);
   }
 }
 
 .show > .btn-secondary.dropdown-toggle:focus {
-  box-shadow: 0 0 0 1px rgba(241, 56, 139, 0.3);
+  box-shadow: 0 0 0 1px rgba(200, 114, 2, 0.3);
 }
 
 .btn-success {
@@ -1246,7 +1246,7 @@ a.btn.disabled, fieldset:disabled a.btn {
   background-color:#FF9B21;
   color: $primary;
     &:hover {
-      color: $primary;  
+      color: $primary;
     }
 }
 
@@ -1336,10 +1336,10 @@ a.btn.disabled, fieldset:disabled a.btn {
   border-color: $primary-border;
 }
 .btn-check:active+.btn-outline-primary:focus, .btn-check:checked+.btn-outline-primary:focus, .btn-outline-primary.active:focus, .btn-outline-primary.dropdown-toggle.show:focus, .btn-outline-primary:active:focus {
-   box-shadow: none !important; 
-}	
+   box-shadow: none !important;
+}
 .btn-check:focus+.btn-outline-primary, .btn-outline-primary:focus {
-   box-shadow: none; 
-}	
+   box-shadow: none;
+}
 
 /* ###### Buttons ###### */

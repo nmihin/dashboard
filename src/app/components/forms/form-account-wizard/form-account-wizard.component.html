@@ -1,0 +1,229 @@
+<app-page-header [title]="'Digital Account Opening'" [items]="['Forms']" [active_item]="'Digital Account Opening'"></app-page-header>
+
+<!-- Row -->
+<div class="row row-sm">
+    <div class="col-lg-12 col-md-12">
+        <div class="card custom-card">
+            <div class="card-body">
+                <div>
+                    <h6 class="main-content-label mb-1">Basic Company Data</h6>
+                    <p class="text-muted card-sub-title">Please fill in the Company data.</p>
+                </div>
+                <div id="wizard1">
+                    <aw-wizard #wizard>
+                        <aw-wizard-step [stepTitle]="'Step 1'">
+                          <form #firstStep="ngForm" novalidate>
+                            <div class="form-group">
+                                <label class="form-control-label" for="vatNumber">VAT Number</label>
+                                <input class="form-control" ngModel #vatNumber="ngModel" required id="vatNumber"
+                                    name="vatNumber" type="text" placeholder="Enter your company VAT number">
+                                <small class="form-text text-danger"
+                                    *ngIf="!vatNumber.valid && (vatNumber.dirty || vatNumber.touched)">This field is
+                                    required!</small>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-control-label" for="companyName">Company Name</label>
+                                <input class="form-control input-md" ngModel #companyName="ngModel" required
+                                    id="companyName" name="companyName" type="text" placeholder="Enter your company name">
+                                <small class="form-text text-danger"
+                                    *ngIf="!companyName.valid && (companyName.dirty || companyName.touched)">This field is
+                                    required!</small>
+                            </div>
+                            <div class="form-group custom-datepicker-dropdown custom-datepicker">
+                              <label for="dateCompanyCreation">Date of Company Establishment</label>
+                              <input type="text" placeholder="Select Date of Company Establishment" name="dateCompanyCreation" id="birthdate" ngModel #dateCompanyCreation="ngModel"
+                                  class="form-control digits" ngbDatepicker #dob="ngbDatepicker"
+                                  [maxDate]="maxDate" (click)="dob.toggle()">
+                              <small class="form-text text-danger"
+                                  *ngIf="!dateCompanyCreation.valid && (dateCompanyCreation.dirty || dateCompanyCreation.touched)">This field is
+                                  required!</small>
+                          </div>
+                          <div class="form-group">
+                            <label class="form-control-label" for="companyAddress">Company address</label>
+                            <input class="form-control" ngModel #companyAddress="ngModel" required id="companyAddress"
+                                name="companyAddress" type="text" placeholder="Enter your company address">
+                            <small class="form-text text-danger"
+                                *ngIf="!companyAddress.valid && (companyAddress.dirty || companyAddress.touched)">This field is
+                                required!</small>
+                          </div>
+                          <div class="form-group">
+                            <label class="form-control-label" for="country">Country</label>
+                            <input class="form-control" ngModel #country="ngModel" required id="country"
+                                name="country" type="text" placeholder="Enter your company address">
+                            <small class="form-text text-danger"
+                                *ngIf="!country.valid && (country.dirty || country.touched)">This field is
+                                required!</small>
+                          </div>
+                          <div class="form-group">
+                                <button type="button" class="btn btn-primary pull-end" [disabled]="!firstStep.valid"
+                                    awNextStep>
+                                    Next
+                                </button>
+                          </div>
+                        </form>
+                        </aw-wizard-step>
+                        <aw-wizard-step [stepTitle]="'Step 2'">
+                            <form #secondStep="ngForm" novalidate>
+                                <div class="form-group">
+                                  <label class="form-control-label" for="activitySector">Activity Sector</label>
+                                  <input class="form-control input-md" ngModel #activitySector="ngModel" required
+                                      id="activitySector" name="activitySector" type="text" placeholder="Choose one">
+                                  <small class="form-text text-danger"
+                                      *ngIf="!activitySector.valid && (activitySector.dirty || activitySector.touched)">This field is
+                                      required!</small>
+                                </div>
+                                <div class="form-group">
+                                  <label class="form-control-label" for="officialArticles">Official Articles of Association / bylaws</label>
+                                  <input class="form-control input-md" ngModel #officialArticles="ngModel" required
+                                      id="officialArticles" name="officialArticles" type="text" placeholder="Enter Official Articles of Association / bylaws">
+                                  <small class="form-text text-danger"
+                                      *ngIf="!officialArticles.valid && (officialArticles.dirty || officialArticles.touched)">This field is
+                                      required!</small>
+                                </div>
+                                <div class="form-group">
+                                  <label class="form-control-label" for="beneficialOwners">Ultimate beneficial owners</label>
+                                  <input class="form-control input-md" ngModel #beneficialOwners="ngModel" required
+                                      id="beneficialOwners" name="beneficialOwners" type="text" placeholder="Enter Ultimate Beneficial Owners">
+                                  <small class="form-text text-danger"
+                                      *ngIf="!beneficialOwners.valid && (beneficialOwners.dirty || beneficialOwners.touched)">This field is
+                                      required!</small>
+                                </div>
+                                <div class="form-group">
+                                  <label class="form-control-label" for="companyIBAN">Company IBAN</label>
+                                  <input class="form-control" ngModel #companyIBAN="ngModel" required id="companyIBAN"
+                                      name="companyIBAN" type="text" placeholder="Enter IBAN">
+                                  <small class="form-text text-danger"
+                                      *ngIf="!companyIBAN.valid && (companyIBAN.dirty || companyIBAN.touched)">This field is
+                                      required!</small>
+                                </div>
+                                <div class="form-group">
+                                    <button type="button" class="btn btn-primary pull-right"
+                                        [disabled]="!secondStep.valid" awNextStep>
+                                        Next
+                                    </button>
+                                    <button type="button" class="btn btn-secondary me-1 pull-end" awPreviousStep>
+                                        Previous
+                                    </button>
+                                </div>
+                            </form>
+                        </aw-wizard-step>
+                        <aw-wizard-step [stepTitle]="'Step 3'">
+                            <div>
+                              <p>To comply with the requirements of the requirements of the Anti-Money Laundry regulations, we need to know who are the persons that own and control your company. Please provide us the identity of those persons that:</p>
+                              <ul>
+                                <li>own 25% or more of the company (directly or indirectly)</li>
+                                <li>control the company (CEO, president of the board,...)</li>
+                                <li>have the signing authority</li>
+                                <li>representing a shareholder company or agent </li>
+                              </ul>
+                            </div>
+                            <form #thirdStep="ngForm" novalidate>
+                                <div class="form-group">
+                                    <label for="tableSelect">PEP</label>
+                                    <input class="form-control" ngModel #tableSelect="ngModel" placeholder="Checkbox"
+                                        required type="text" name="tableSelect" id="tableSelect">
+                                    <small class="form-text text-danger"
+                                        *ngIf="!tableSelect.valid && (tableSelect.dirty || tableSelect.touched)">This field is
+                                        required!</small>
+
+                                </div>
+                                <div class="form-group">
+                                    <button type="button" class="btn btn-primary pull-right" [disabled]="!thirdStep.valid"
+                                        awNextStep>
+                                        Next
+                                    </button>
+                                    <button type="button" class="btn btn-secondary me-1 pull-end" awPreviousStep>
+                                        Previous</button>
+                                </div>
+                            </form>
+                        </aw-wizard-step>
+                        <aw-wizard-completion-step stepTitle="Step 4" awEnableBackLinks>
+                            <form #fourthStep="ngForm" novalidate>
+                              <div class="form-group">
+                                <label for="titlePerson">How may we address you?</label>
+                                <input class="form-control mt-1" type="text" placeholder="How may we address you?" required id="city"
+                                    name="titlePerson" ngModel #titlePerson="ngModel">
+                                <small class="form-text text-danger"
+                                    *ngIf="!titlePerson.valid && (titlePerson.dirty || titlePerson.touched)">This field is
+                                    required!</small>
+                              </div>
+                              <div class="form-group">
+                                <label for="firstName">First name</label>
+                                <input class="form-control mt-1" type="text" placeholder="Enter your first name" required id="city"
+                                    name="firstName" ngModel #firstName="ngModel">
+                                <small class="form-text text-danger"
+                                    *ngIf="!firstName.valid && (firstName.dirty || firstName.touched)">This field is
+                                    required!</small>
+                              </div>
+                              <div class="form-group">
+                                <label for="lastName">Last name</label>
+                                <input class="form-control mt-1" type="text" placeholder="Enter your last name" required id="city"
+                                    name="lastName" ngModel #lastName="ngModel">
+                                <small class="form-text text-danger"
+                                    *ngIf="!lastName.valid && (lastName.dirty || lastName.touched)">This field is
+                                    required!</small>
+                              </div>
+                              <div class="form-group custom-datepicker-dropdown custom-datepicker">
+                                <label for="dateOfBirth">Date of Birth</label>
+                                <input type="text" placeholder="Select Date of Birth" name="dateOfBirth" id="birthdate" ngModel #dateOfBirth="ngModel"
+                                    class="form-control digits" ngbDatepicker #dob="ngbDatepicker"
+                                    [maxDate]="maxDate" (click)="dob.toggle()">
+                                <small class="form-text text-danger"
+                                    *ngIf="!dateOfBirth.valid && (dateOfBirth.dirty || dateOfBirth.touched)">This field is
+                                    required!</small>
+                              </div>
+                              <div class="form-group">
+                                <label for="nationality">Nationality</label>
+                                <input class="form-control mt-1" type="text" placeholder="Choose one" required id="city"
+                                    name="nationality" ngModel #nationality="ngModel">
+                                <small class="form-text text-danger"
+                                    *ngIf="!nationality.valid && (nationality.dirty || nationality.touched)">This field is
+                                    required!</small>
+                              </div>
+                              <button class="btn btn-success pull-right" type="button" (click)="finish()"
+                                  [disabled]="!fourthStep.valid">Finish</button>
+                              <button class="btn btn-secondary pull-end me-1" type="button"
+                                  awPreviousStep>Previous</button>
+                            </form>
+                        </aw-wizard-completion-step>
+                        <aw-wizard-completion-step stepTitle="Step 5" awEnableBackLinks>
+                          <form #fiftStep="ngForm" novalidate>
+
+                            <div class="form-group">
+                              <label for="identityDocument">Identity document</label>
+                              <input class="form-control mt-1" type="text" placeholder="Choose one" required id="city"
+                                  name="identityDocument" ngModel #identityDocument="ngModel">
+                              <small class="form-text text-danger"
+                                  *ngIf="!identityDocument.valid && (identityDocument.dirty || identityDocument.touched)">This field is
+                                  required!</small>
+                            </div>
+                            <div class="form-group">
+                              <label for="documentFileUpload">Document file upload</label>
+                              <input class="form-control mt-1" type="text" placeholder="Choose one" required id="city"
+                                  name="documentFileUpload" ngModel #documentFileUpload="ngModel">
+                              <small class="form-text text-danger"
+                                  *ngIf="!documentFileUpload.valid && (documentFileUpload.dirty || documentFileUpload.touched)">This field is
+                                  required!</small>
+                            </div>
+                            <div class="form-group custom-datepicker-dropdown custom-datepicker">
+                              <label for="documentValidUntil">ID Document valid until</label>
+                              <input type="text" placeholder="Select Date of Company Establishment" name="documentValidUntil" id="birthdate" ngModel #documentValidUntil="ngModel"
+                                  class="form-control digits" ngbDatepicker #dob="ngbDatepicker"
+                                  [maxDate]="maxDate" (click)="dob.toggle()">
+                              <small class="form-text text-danger"
+                                  *ngIf="!documentValidUntil.valid && (documentValidUntil.dirty || documentValidUntil.touched)">This field is
+                                  required!</small>
+                            </div>
+                            <button class="btn btn-success pull-right" type="button" (click)="finish()"
+                                [disabled]="!fourthStep.valid">Finish</button>
+                            <button class="btn btn-secondary pull-end me-1" type="button"
+                                awPreviousStep>Previous</button>
+                          </form>
+                      </aw-wizard-completion-step>
+                    </aw-wizard>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Row-->

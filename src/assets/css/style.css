@@ -2096,49 +2096,49 @@ fieldset:disabled a.btn {
 .btn-secondary {
     color: #ffffff;
     background-color: #f1388b;
-    border-color: #ea67a2;
+    border-color: #FF9B21;
 }
 
 .btn-secondary:hover {
     color: #ffffff;
-    background-color: #de287a;
-    border-color: #ea67a2;
+    background-color: #C87202;
+    border-color: #FF9B21;
 }
 
 .btn-secondary:focus,
 .btn-secondary.focus {
-    background-color: #de287a !important;
-    border-color: #ea67a2 !important;
-    box-shadow: 0 0 0 1px rgba(241, 56, 139, 0.3);
+    background-color: #C87202 !important;
+    border-color: #FF9B21 !important;
+    box-shadow: 0 0 0 1px rgba(200, 114, 2, 0.3);
 }
 
 .btn-secondary.disabled,
 .btn-secondary:disabled {
     color: #ffffff;
     background-color: #f1388b;
-    border-color: #ea67a2;
+    border-color: #FF9B21;
 }
 
 .btn-secondary:not(:disabled):not(.disabled):active,
 .btn-secondary:not(:disabled):not(.disabled).active {
     color: #ffffff;
-    background-color: #de287a;
-    border-color: #ea67a2;
+    background-color: #C87202;
+    border-color: #FF9B21;
 }
 
 .show>.btn-secondary.dropdown-toggle {
     color: #ffffff;
     background-color: #f1388b;
-    border-color: #ea67a2;
+    border-color: #FF9B21;
 }
 
 .btn-secondary:not(:disabled):not(.disabled):active:focus,
 .btn-secondary:not(:disabled):not(.disabled).active:focus {
-    box-shadow: 0 0 0 1px rgba(241, 56, 139, 0.3);
+    box-shadow: 0 0 0 1px rgba(200, 114, 2, 0.3);
 }
 
 .show>.btn-secondary.dropdown-toggle:focus {
-    box-shadow: 0 0 0 1px rgba(241, 56, 139, 0.3);
+    box-shadow: 0 0 0 1px rgba(200, 114, 2, 0.3);
 }
 
 .btn-success {
@@ -83441,6 +83441,7 @@ input[type=search]::-webkit-search-cancel-button {
     }
 
     .main-header-center .responsive-logo .mobile-logo {
+        max-height: 50px;
         text-align: center;
         margin: 0 auto;
     }

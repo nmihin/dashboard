@@ -7,6 +7,7 @@ import { AdvancedFormsComponent } from './advanced-forms/advanced-forms.componen
 import { FormLayoutsComponent } from './form-layouts/form-layouts.component';
 import { FormElementSizesComponent } from './form-element-sizes/form-element-sizes.component';
 import { FormValidationComponent } from './form-validation/form-validation.component';
+import { FormAccountWizardsComponent } from './form-account-wizard/form-account-wizard.component';
 import { FormWizardsComponent } from './form-wizards/form-wizards.component';
 import { FormEditorComponent } from './form-editor/form-editor.component';
 import { SharedModule } from 'src/app/shared/shared.module';
@@ -45,6 +46,7 @@ import { QuillModule } from 'ngx-quill';
     FormLayoutsComponent,
     FormElementSizesComponent,
     FormValidationComponent,
+    FormAccountWizardsComponent,
     FormWizardsComponent,
     FormEditorComponent
   ],

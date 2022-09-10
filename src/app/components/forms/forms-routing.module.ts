@@ -7,6 +7,7 @@ import { FormElementsComponent } from './form-elements/form-elements.component';
 import { FormLayoutsComponent } from './form-layouts/form-layouts.component';
 import { FormValidationComponent } from './form-validation/form-validation.component';
 import { FormWizardsComponent } from './form-wizards/form-wizards.component';
+import { FormAccountWizardsComponent } from './form-account-wizard/form-account-wizard.component';
 
 const routes: Routes = [
   {
@@ -40,6 +41,10 @@ const routes: Routes = [
         path: 'form-wizards',
         component: FormWizardsComponent
       },
+      {
+        path: 'form-account-wizard',
+        component: FormAccountWizardsComponent
+      }
     ]
   }
 ];

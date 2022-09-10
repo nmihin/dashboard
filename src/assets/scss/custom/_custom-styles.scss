@@ -1168,6 +1168,7 @@ input[type="search"]::-webkit-search-cancel-button {
 @media (max-width: 767px) {
   .main-header-center {
     .responsive-logo .mobile-logo {
+      max-height: 50px;
       text-align: center;
       margin: 0 auto;
     }
@@ -4644,7 +4645,7 @@ li.ui-timepicker-selected,
   }
 }
 
-@media (max-width: 1399px) { 
+@media (max-width: 1399px) {
   .layout-width-style {
     display: none;
   }
@@ -4677,7 +4678,7 @@ li.ui-timepicker-selected,
   display: block !important;
 }
 
-@media (max-width: 767px) { 
+@media (max-width: 767px) {
   .lg-outer .lg-image {
     width: 400px !important;
   }
@@ -4706,7 +4707,7 @@ li.ui-timepicker-selected,
   }
 }
 
-@media (max-width: 576px) { 
+@media (max-width: 576px) {
   .intl-tel-input input {
     width: 150px !important;
   }
@@ -4716,17 +4717,17 @@ li.ui-timepicker-selected,
   left: auto !important;
   top: 0px !important;
 }
-@media (max-width: 576px) { 
+@media (max-width: 576px) {
   .ql-snow .ql-tooltip input[type=text]{
     width: 70px;
   }
 }
-@media (min-width: 1600px) { 
+@media (min-width: 1600px) {
   .profile-about-social {
     display: flex;
   }
 }
-@media screen and (min-width: 992px) and (max-width: 1002px) { 
+@media screen and (min-width: 992px) and (max-width: 1002px) {
   .item-card-desc {
   display: block !important;
   }

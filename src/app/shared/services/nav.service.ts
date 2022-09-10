@@ -87,6 +87,13 @@ export class NavService implements OnDestroy {
       headTitle: 'DASHBOARD',
     },
     {
+      title: 'Digital Account Opening',
+      icon: 'file',
+      type: 'link',
+      active: true,
+      path: '/forms/form-account-wizard'
+    },
+    {
       title: 'Dashboard',
       icon: 'home',
       type: 'sub',
@@ -97,7 +104,7 @@ export class NavService implements OnDestroy {
       ],
     },
     {
-      title: 'ECommerce', 
+      title: 'ECommerce',
       icon: 'shopping-bag',
       type: 'sub',
       active: false,
@@ -400,7 +407,7 @@ export class NavService implements OnDestroy {
         { path: '/pages/faqs', title: 'FAQS', type: 'link' },
         { path: '/pages/empty-page', title: 'Empty Page', type: 'link' },
         { path: '/switcher', title: 'Switcher', type: 'link' },
-        
+
         {
           path: '/custom-pages/success-message',
           title: 'Success message',
