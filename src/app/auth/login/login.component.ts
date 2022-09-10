@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { AuthService } from '../../shared/services/firebase/auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -13,12 +14,12 @@ export class LoginComponent implements OnInit {
   public loginForm: FormGroup | any;
   public errorMessage: any;
 
-  constructor(public authService: AuthService, private fb: FormBuilder) {
+  constructor(private router: Router,public authService: AuthService, private fb: FormBuilder) {
       this.loginForm = this.fb.group({
         email: ['spruko@template.com', [Validators.required, Validators.email]],
         password: ['spruko', Validators.required]
       });
-      
+
   }
 
   ngOnInit() {
@@ -27,7 +28,7 @@ export class LoginComponent implements OnInit {
   showPassword() {
     this.show = !this.show;
   }
-  
+
   // Login With Google
   loginGoogle() {
     this.authService.GoogleAuth();
@@ -45,7 +46,11 @@ export class LoginComponent implements OnInit {
 
   // Simple Login
   login() {
-    this.authService.SignIn(this.loginForm.value['email'], this.loginForm.value['password']);
+    //this.authService.SignIn(this.loginForm.value['email'], this.loginForm.value['password']);
+    if (this.loginForm.controls['email'].value === "spruko@template.com" && this.loginForm.controls['password'].value === "spruko")
+    {
+      this.router.navigate(['/dashboard/dashboard01']);
+    }
   }
 
 }

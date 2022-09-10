@@ -15,7 +15,7 @@ const routes: Routes = [
     path: '',
     redirectTo: 'dashboard/dashboard01',
     pathMatch: 'full'
-  },  
+  },
   {
     path: '',
     loadChildren: () => import('./auth/auth.module').then(m => m.AuthModule),
@@ -27,25 +27,25 @@ const routes: Routes = [
   {
     path: '',
     component: ContentLayoutComponent,
-    canActivate: [AdminGuard],
+    // canActivate: [AdminGuard],
     children: content
   },
   {
     path: '',
     component: SwitcherLayoutComponent,
-    canActivate: [AdminGuard],
+    // canActivate: [AdminGuard],
     children: switcher
   },
   {
     path: '',
     component: ErrorLayoutComponent,
-    canActivate: [AdminGuard],
+    // canActivate: [AdminGuard],
     children: errorRoute
   },
   {
     path: '',
     component: FullLayoutComponent,
-    canActivate: [AdminGuard],
+    // canActivate: [AdminGuard],
     children: customRoute
   },
   {

@@ -8,9 +8,9 @@
       <div class="sidemenu-logo">
         <a class="main-logo" routerLink="/dashboard/dashboard01">
           <img src="./assets/img/brand/logo_smarpay_swiss.svg" class="header-brand-img desktop-logo-dark" alt="NovaLogo">
-          <img src="./assets/img/brand/icon-light.png" class="header-brand-img icon-logo-dark" alt="NovaLogo">
-          <img src="./assets/img/brand/logo.png" class="header-brand-img desktop-logo" alt="NovaLogo">
-          <img src="./assets/img/brand/icon.png" class="main-logo mobile-darkheader-brand-img icon-logo"
+          <img src="./assets/img/brand/logo_smarpay_swiss.svg" class="header-brand-img icon-logo-dark" alt="NovaLogo">
+          <img src="./assets/img/brand/logo_smarpay_swiss.svg" class="header-brand-img desktop-logo" alt="NovaLogo">
+          <img src="./assets/img/brand/logo_smarpay_swiss.svg" class="main-logo mobile-darkheader-brand-img icon-logo"
             alt="NovaLogo">
         </a>
       </div>
@@ -81,7 +81,7 @@
                     {{childrenItem.title}}
                   </a>
                   <!-- empty -->
-                  <a class="nav-sub-link" routerLinkActive="active" 
+                  <a class="nav-sub-link" routerLinkActive="active"
                   href="javascript:;" *ngIf="childrenItem.type === 'empty' "
                   (click)="toggleNavActive(childrenItem)">
                   {{childrenItem.title}}
