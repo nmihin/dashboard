@@ -9,9 +9,15 @@ import { DashboardPerformanceOverviewComponent } from './performance-overview/pe
 
 import { SharedModule } from 'src/app/shared/shared.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgApexchartsModule } from 'ng-apexcharts';
-
+import { NgSelectModule } from '@ng-select/ng-select';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatNativeDateModule } from '@angular/material/core';
+import { MatInputModule } from '@angular/material/input';
+import { MatIconModule } from '@angular/material/icon';
+import { MatStepperModule } from '@angular/material/stepper';
 
 @NgModule({
   declarations: [
@@ -26,7 +32,15 @@ import { NgApexchartsModule } from 'ng-apexcharts';
     SharedModule,
     NgbModule,
     FormsModule,
-    NgApexchartsModule
+    ReactiveFormsModule,
+    NgApexchartsModule,
+    NgSelectModule,
+    MatFormFieldModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    MatInputModule,
+    MatIconModule,
+    MatStepperModule
   ]
 })
 export class DashboardModule { }

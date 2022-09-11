@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { chartOptions, donut } from 'src/app/shared/data/dashboard/dashboard01';
-
+import { ApexChartData, ApexRandomData, BarData, DonutChartData, PieChartData, RadialBarCircleData, RadialBarCircleMultipleData, StackedBarData } from '../../../shared/data/chart/apex';
+import { FormBuilder, FormGroup, FormControl, Validators } from '@angular/forms';
 
 export interface RecentType {
   id?: number;
@@ -42,13 +43,20 @@ const RecentData: RecentType[] = [
   styleUrls: ['./payment-overview.component.scss']
 })
 export class DashboardPaymentOverviewComponent implements OnInit {
-
+  selected: any;
   page = 1;
   pageSize = 10;
   collectionSize = RecentData.length;
   RecentList!: RecentType[];
+  public RandomData = ApexRandomData;
+  range = new FormGroup({
+    start: new FormControl(),
+    end: new FormControl(),
+  });
 
-  constructor() {
+  constructor(
+    private formBuilder: FormBuilder
+  ) {
     this.refreshCountries();
    }
 

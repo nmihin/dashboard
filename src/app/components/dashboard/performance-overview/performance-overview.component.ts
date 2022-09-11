@@ -8,6 +8,7 @@ import {
   IDateRangePickerOptions,
 } from 'ngx-daterange';
 import { map, Observable } from 'rxjs';
+import { ApexChartData, ApexRandomData, BarData, DonutChartData, PieChartData, RadialBarCircleData, RadialBarCircleMultipleData, StackedBarData } from '../../../shared/data/chart/apex';
 
 export interface RecentType {
   id?: number;
@@ -55,6 +56,7 @@ export class DashboardPerformanceOverviewComponent implements OnInit {
   collectionSize = RecentData.length;
   RecentList!: RecentType[];
   alwaysShowCalendars: boolean;
+  public RandomData = ApexRandomData;
 
   invalidDates: moment.Moment[] = [
     moment().add(2, 'days'),

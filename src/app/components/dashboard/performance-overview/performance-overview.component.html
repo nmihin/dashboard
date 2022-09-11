@@ -110,24 +110,87 @@
     <!--row-->
     <div class="row row-sm">
       <div class="col-md-12 col-lg-12">
-        <div class="card custom-card overflow-hidden">
-          <div class="card-header border-bottom d-flex">
-
-            <div class="row row-sm">
-              <div class="col-lg-4">
+        <div class="card custom-card">
+          <div class="card-body">
+            <div class="row">
+              <div class="col-sm-4">
+                <label class="form-label tx-semibold">Expiration Date</label>
                 <div class="input-group">
                   <div class="input-group-text">
                     <i class="fe fe-calendar  lh--9 op-6"></i>
                   </div>
-                  <input type="text" class="form-control" ngxDaterangepickerMd [(ngModel)]="selected" placeholder="Select Date" />
+                  <input type="text"
+                  class="form-control"
+                  ngxDaterangepickerMd
+                  [(ngModel)]="selected"
+                  placeholder="Select Date" />
                 </div>
               </div>
+              <div class="col-sm-3">
+                <label class="form-label tx-semibold">Expiration Date</label>
+                <ng-select name="user[paymentType]" placeholder="Payment Type">
+                  <ng-option value="1">Selecta</ng-option>
+                  <ng-option value="2">Twint</ng-option>
+              </ng-select>
+             </div>
+             <div class="col-sm-3">
+              <label class="form-label tx-semibold">Select Range</label>
+              <ng-select name="user[paymentRange]" placeholder="Select Range">
+                <ng-option value="2014">One Week</ng-option>
+                <ng-option value="2014">One Month</ng-option>
+                <ng-option value="2014">One Year</ng-option>
+              </ng-select>
+           </div>
+             <div class="col-sm-2">
+                <label class="form-label tx-semibold" style="height: 20px;"></label>
+                <div class="btn-list">
+                  <button class="btn search btn-primary"><i class="fe fe-folder me-1"></i> Filter</button>
+                </div>
+             </div>
             </div>
-
           </div>
         </div>
       </div>
     </div>
+
+
+    <!-- Row -->
+    <div class="row row-sm">
+      <div class="col-sm-12 col-md-6">
+          <div class="card custom-card overflow-hidden">
+              <div class="card-body">
+                  <div>
+                      <h6 class="main-content-label mb-1">Area Chart With Random data</h6>
+                      <p class="text-muted  card-sub-title">Below is the area chart with random data example.</p>
+                  </div>
+                  <div class="chartjs-wrapper-demo">
+                      <apx-chart [series]="RandomData.series" [chart]="RandomData.chart"
+                          [annotations]="RandomData.annotations" [colors]="RandomData.colors"
+                          [dataLabels]="RandomData.dataLabels" [markers]="RandomData.markers" [xaxis]="RandomData.xaxis"
+                          [tooltip]="RandomData.tooltip" [fill]="RandomData.fill"></apx-chart>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="col-sm-12 col-md-6">
+        <div class="card custom-card overflow-hidden">
+            <div class="card-body">
+                <div>
+                    <h6 class="main-content-label mb-1">Area Chart With Random data</h6>
+                    <p class="text-muted  card-sub-title">Below is the area chart with random data example.</p>
+                </div>
+                <div class="chartjs-wrapper-demo">
+                    <apx-chart [series]="RandomData.series" [chart]="RandomData.chart"
+                        [annotations]="RandomData.annotations" [colors]="RandomData.colors"
+                        [dataLabels]="RandomData.dataLabels" [markers]="RandomData.markers" [xaxis]="RandomData.xaxis"
+                        [tooltip]="RandomData.tooltip" [fill]="RandomData.fill"></apx-chart>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+
   </div><!-- col end -->
 </div>
 <!-- End Row -->
