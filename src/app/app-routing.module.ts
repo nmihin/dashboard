@@ -13,7 +13,7 @@ import { switcher } from './shared/routes/switcher.routes';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'dashboard/dashboard01',
+    redirectTo: 'dashboard/performance-overview',
     pathMatch: 'full'
   },
   {

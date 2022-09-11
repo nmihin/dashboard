@@ -87,21 +87,23 @@ export class NavService implements OnDestroy {
       headTitle: 'DASHBOARD',
     },
     {
-      title: 'Digital Account Opening',
-      icon: 'file',
-      type: 'link',
-      active: true,
-      path: '/forms/form-account-wizard'
-    },
-    {
       title: 'Dashboard',
       icon: 'home',
       type: 'sub',
       active: true,
       children: [
+        { path: '/dashboard/performance-overview', title: 'Performance Overview', type: 'link' },
+        { path: '/dashboard/payment-overview', title: 'Payment Overview', type: 'link' },
         { path: '/dashboard/dashboard01', title: 'Dashboard01', type: 'link' },
-        { path: '/dashboard/dashboard02', title: 'Dashboard02', type: 'link' },
+        { path: '/dashboard/dashboard02', title: 'Dashboard02', type: 'link' }
       ],
+    },
+    {
+      title: 'Digital Account Opening',
+      icon: 'file',
+      type: 'link',
+      active: false,
+      path: '/forms/form-account-wizard'
     },
     {
       title: 'ECommerce',

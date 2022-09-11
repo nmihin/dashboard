@@ -69,7 +69,7 @@ export class AuthService implements OnInit {
   SignUp(email:any, password:any) {
     return this.afAuth.createUserWithEmailAndPassword(email, password)
       .then((result) => {
-        /* Call the SendVerificaitonMail() function when new user sign 
+        /* Call the SendVerificaitonMail() function when new user sign
         up and returns promise */
         this.SendVerificationMail();
         this.SetUserData(result.user);
@@ -77,7 +77,7 @@ export class AuthService implements OnInit {
         window.alert(error.message)
       })
   }
-  
+
 
   // main verification function
   SendVerificationMail() {
@@ -85,7 +85,7 @@ export class AuthService implements OnInit {
         this.router.navigate(['/dashboard/dashboard01']);
       })
   }
-  
+
 
   // Sign in with Facebook
   signInFacebok() {
@@ -116,7 +116,7 @@ export class AuthService implements OnInit {
     return this.afAuth.signInWithPopup(provider)
       .then((result:any) => {
         this.ngZone.run(() => {
-          this.router.navigate(['/dashboard/dashboard01']);
+          this.router.navigate(['/dashboard/performance-overview']);
         });
         this.SetUserData(result.user);
       }).catch((error:any) => {
@@ -131,7 +131,7 @@ export class AuthService implements OnInit {
       email: user.email,
       displayName: user.displayName,
       uid: user.uid,
-      photoURL: user.photoURL || 'src/favicon.ico',
+      photoURL: user.photoURL || 'src/favicon.png',
       emailVerified: user.emailVerified
     };
     userRef.delete().then(function () {})

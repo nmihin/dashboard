@@ -31,7 +31,6 @@ import { NgxDropzoneModule } from 'ngx-dropzone';
 import { HttpClientModule } from '@angular/common/http';
 import { AdvancedFormService } from './advanced-forms/advanced-form.service';
 import { MatStepperModule } from '@angular/material/stepper';
-
 import { ToastrModule, ToastrService } from 'ngx-toastr';
 import { ArchwizardModule } from 'angular-archwizard';
 import { CKEditorModule } from '@ckeditor/ckeditor5-angular';

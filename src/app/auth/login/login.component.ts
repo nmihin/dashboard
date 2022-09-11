@@ -49,7 +49,7 @@ export class LoginComponent implements OnInit {
     //this.authService.SignIn(this.loginForm.value['email'], this.loginForm.value['password']);
     if (this.loginForm.controls['email'].value === "spruko@template.com" && this.loginForm.controls['password'].value === "spruko")
     {
-      this.router.navigate(['/dashboard/dashboard01']);
+      this.router.navigate(['/dashboard/performance-overview']);
     }
   }
 
