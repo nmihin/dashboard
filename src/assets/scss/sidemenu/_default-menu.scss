@@ -262,9 +262,11 @@
 .main-sidebar-header {
   flex-shrink: 0;
   height: 64px;
-  
+
   align-items: center;
-  
+  .header-brand-img {
+    max-width: 100%;
+  }
 }
 
 .main-sidebar-loggedin {
@@ -684,7 +686,7 @@
 
 @media (min-width: 768px) {
   /*main-sidebar-hide*/
-  
+
 	.main-body.main-sidebar-hide.main-sidebar-open .side-menu .nav-link{
 	   padding:4px 0px  !important;
 	 }

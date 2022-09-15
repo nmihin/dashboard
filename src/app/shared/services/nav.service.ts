@@ -106,6 +106,99 @@ export class NavService implements OnDestroy {
       path: '/forms/form-account-wizard'
     },
     {
+      title: 'Advanced Search',
+      icon: 'search',
+      type: 'link',
+      active: false,
+      path: '/#',
+      children: [
+        { path: '/#', title: 'Advanced Search 1', type: 'link' },
+        { path: '/#', title: 'Advanced Search 2', type: 'link' }
+      ]
+    },
+    {
+      title: 'Payments',
+      icon: 'home',
+      type: 'link',
+      active: false,
+      path: '/#',
+      children: [
+        { path: '/#', title: 'Payments 1', type: 'link' },
+        { path: '/#', title: 'Payments 2', type: 'link' }
+      ]
+    },
+    {
+      title: 'Transactions',
+      icon: 'home',
+      type: 'link',
+      active: false,
+      path: '/#',
+      children: [
+        { path: '/#', title: 'Transactions 1', type: 'link' },
+        { path: '/#', title: 'Transactions 2', type: 'link' }
+      ]
+    },
+    {
+      title: 'Purchases',
+      icon: 'shopping-cart',
+      type: 'link',
+      active: false,
+      path: '/#',
+      children: [
+        { path: '/#', title: 'Purchases 1', type: 'link' },
+        { path: '/#', title: 'Purchases 2', type: 'link' }
+      ]
+    },
+    {
+      title: 'POS',
+      icon: 'home',
+      type: 'link',
+      active: false,
+      path: '/#',
+      children: [
+        { path: '/#', title: 'POS 1', type: 'link' },
+        { path: '/#', title: 'POS 2', type: 'link' }
+      ]
+    },
+    {
+      title: 'Money Wallets',
+      icon: 'home',
+      type: 'link',
+      active: false,
+      path: '/#',
+      children: [
+        { path: '/#', title: 'Money Wallets 1', type: 'link' },
+        { path: '/#', title: 'Money Wallets 2', type: 'link' }
+      ]
+    },
+    {
+      title: 'Products',
+      icon: 'home',
+      type: 'link',
+      active: false,
+      path: '/#',
+      children: [
+        { path: '/#', title: 'Products 1', type: 'link' },
+        { path: '/#', title: 'Products 2', type: 'link' }
+      ]
+    },
+    {
+      title: 'Devices',
+      icon: 'home',
+      type: 'link',
+      active: false,
+      path: '/#',
+      children: [
+        { path: '/#', title: 'Devices 1', type: 'link' },
+        { path: '/#', title: 'Devices 2', type: 'link' }
+      ]
+    },
+
+
+
+
+
+    {
       title: 'ECommerce',
       icon: 'shopping-bag',
       type: 'sub',

@@ -349,7 +349,7 @@ a.btn.disabled, fieldset:disabled a.btn {
 
 .btn-secondary {
   color: $white;
-  background-color: $secondary;
+  background-color: $primary;
   border-color: #FF9B21;
 
   &:hover {
@@ -366,7 +366,7 @@ a.btn.disabled, fieldset:disabled a.btn {
 
   &.disabled, &:disabled {
     color: $white;
-    background-color: $secondary;
+    background-color: $primary;
     border-color: #FF9B21;
   }
 
@@ -381,7 +381,7 @@ a.btn.disabled, fieldset:disabled a.btn {
 
 .show > .btn-secondary.dropdown-toggle {
   color: $white;
-  background-color: $secondary;
+  background-color: $primary;
   border-color: #FF9B21;
 }
 

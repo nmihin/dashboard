@@ -178,7 +178,7 @@ body {
     text-align: left;
     background-color: #ffffff;
     font-family: "Hind Siliguri", sans-serif;
-    background: #f1f2f7;
+    background: #ffffff;
     color: #53545e;
     direction: ltr;
     -webkit-font-smoothing: antialiased;
@@ -2095,7 +2095,7 @@ fieldset:disabled a.btn {
 
 .btn-secondary {
     color: #ffffff;
-    background-color: #f1388b;
+    background-color: var(--primary-bg-color);
     border-color: #FF9B21;
 }
 
@@ -2115,7 +2115,7 @@ fieldset:disabled a.btn {
 .btn-secondary.disabled,
 .btn-secondary:disabled {
     color: #ffffff;
-    background-color: #f1388b;
+    background-color: var(--primary-bg-color);
     border-color: #FF9B21;
 }
 
@@ -2128,7 +2128,7 @@ fieldset:disabled a.btn {
 
 .show>.btn-secondary.dropdown-toggle {
     color: #ffffff;
-    background-color: #f1388b;
+    background-color: var(--primary-bg-color);
     border-color: #FF9B21;
 }
 
@@ -3174,6 +3174,10 @@ fieldset:disabled a.btn {
 .card.text-white .main-content-label,
 .card.tx-white .main-content-label {
     color: #ffffff;
+}
+
+.card.text-gray {
+    color: #8D95B1;
 }
 
 .card-body {
@@ -9845,6 +9849,7 @@ table.table-bordered.dataTable thead tr:first-child td {
     line-height: 2.5rem;
     vertical-align: middle;
     width: auto;
+    max-width: 300px;
 }
 
 .header-navheading {
@@ -32325,6 +32330,10 @@ A VERTICAL event
     align-items: center;
 }
 
+.main-sidebar-header .header-brand-img {
+    max-width: 100%;
+}
+
 .main-sidebar-loggedin {
     padding: 10px 20px;
     display: flex;
@@ -38184,7 +38193,20 @@ body:is(.color-menu) .main-sidebar-body .nav-sub-item .nav-sub-link.active {
 }
 
 .main-signin-wrapper .signin-page-new {
-    background-color: #767676;
+    background-color: #f1f2f7;
+}
+
+.signpages .login_form {
+    border: 1px solid #e8e8f7 !important;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+@media (max-width: 992px) {
+    .signpages .login_form {
+        border-top-right-radius: 11px;
+        border-bottom-right-radius: 11px;
+    }
 }
 
 .main-card-signin {

@@ -31,9 +31,14 @@
                             </div>
                             <div class="form-group custom-datepicker-dropdown custom-datepicker">
                               <label for="dateCompanyCreation">Date of Company Establishment</label>
-                              <input type="text" placeholder="Select Date of Company Establishment" name="dateCompanyCreation" id="birthdate" ngModel #dateCompanyCreation="ngModel"
-                                  class="form-control digits" ngbDatepicker #dob="ngbDatepicker"
-                                  [maxDate]="maxDate" (click)="dob.toggle()">
+                              <div class="input-group">
+                                <div class="input-group-text">
+                                  Date:
+                                </div>
+                                <input class="form-control" placeholder="00/00/0000" type="text" name="dateCompanyCreation" id="birthdate" ngModel #dateCompanyCreation="ngModel"
+                                    class="form-control digits" ngbDatepicker #dob="ngbDatepicker"
+                                    [maxDate]="maxDate" (click)="dob.toggle()">
+                              </div>
                               <small class="form-text text-danger"
                                   *ngIf="!dateCompanyCreation.valid && (dateCompanyCreation.dirty || dateCompanyCreation.touched)">This field is
                                   required!</small>

@@ -5,7 +5,24 @@
   display: flex;
   justify-content: center;
   .signin-page-new {
-    background-color: #767676;
+    background-color: #f1f2f7;
+  }
+}
+
+.signpages {
+  .login_form {
+    border: 1px solid #e8e8f7 !important;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+}
+
+@media (max-width: 992px) {
+  .signpages {
+    .login_form {
+      border-top-right-radius: 11px;
+      border-bottom-right-radius: 11px;
+    }
   }
 }
 
@@ -443,7 +460,7 @@
     &:active:focus, &.active:focus, &:focus {
       box-shadow: none;
     }
-  } 
+  }
 }
 
 .signpages .login_form {
@@ -451,5 +468,5 @@
     display: none;
   }
 }
- 
+
 /* ######  Error  ###### */
